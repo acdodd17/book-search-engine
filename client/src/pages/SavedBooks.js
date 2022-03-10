@@ -38,6 +38,14 @@ const SavedBooks = () => {
     return <h2>LOADING...</h2>;
   }
 
+  if (!userData?.username) {
+    return (
+      <h4>
+        You need to be logged in to see this page. Use the navigation links above to sign up or log in!
+      </h4>
+    );
+  }
+
   return (
     <>
       <Jumbotron fluid className='text-light bg-dark'>
